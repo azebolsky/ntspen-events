@@ -14,12 +14,12 @@ const Calendar = () => {
         })
         .then((data) => {
             console.log(data.items);
-            setEvents(data.items.slice(0,10));
+            setEvents(data.items.slice(0,5));
         })
     }, []);
 
     return (
-        <div>
+        <div className="justify-between w-7xl mb-10 mt-5 ml-5 mr-5">
             {events.map((event) => <Event key={event.id} {...event}  />)}
         </div>
     );
